@@ -14,6 +14,17 @@ var mainView = myApp.addView('.view-main', {
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
+
+    navigator.notification.beep(1);
+    navigator.vibrate(1000);
+
+    $$('.notificar').on('click',function(e){
+    navigator.notification.alert('You are the winner!',null, 'Game Over', 'Done');
+    
+    });
+
+
+
 });
 
 
